@@ -1,1 +1,45 @@
-<p>new-user works!</p>
+<form>
+  <div class="form-group row">
+    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input required type="text" class="form-control" id="inputName" placeholder="Name">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input required type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">Active</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="activityCheck">
+        <label class="form-check-label" for="activityCheck">
+          Yes/No
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="roleSelect">Role</label>
+    <div class="col-sm-10">
+      <select class="custom-select" id="roleSelect">
+        <option selected>Select</option>
+        <option value="1">User</option>
+        <option value="2">Editor</option>
+        <option value="3">Admin</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
