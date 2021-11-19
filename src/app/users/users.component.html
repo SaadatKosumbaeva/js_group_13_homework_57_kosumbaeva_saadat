@@ -1,3 +1,10 @@
-<div class="list-group">
-  <app-user></app-user>
+<h3 class="text-center">Users</h3>
+<div *ngIf="userService.users.length > 0; else emptyUsersList" class="list-group">
+  <app-user *ngFor="let user of userService.users" [user]="user"></app-user>
 </div>
+<ng-template #emptyUsersList>
+  <div class="alert alert-primary">
+    Cart is empty. Please add some items!
+  </div>
+</ng-template>
+
