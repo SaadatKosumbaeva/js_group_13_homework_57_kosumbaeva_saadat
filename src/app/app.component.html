@@ -1,8 +1,12 @@
 <div class="p-3 mb-4 bg-primary text-center text-white"><h1>User management</h1></div>
 <div class="container">
   <div class="row justify-content-between">
-    <app-new-user class="p-2"></app-new-user>
-    <app-users class="p-2"></app-users>
+    <div class="row flex-column app-item">
+      <app-new-user class="p-2"></app-new-user>
+      <app-new-group class="p-2"></app-new-group>
+    </div>
+    <app-users class="p-2 app-item"></app-users>
+    <app-groups class="p-2 app-item"></app-groups>
   </div>
 </div>
 
