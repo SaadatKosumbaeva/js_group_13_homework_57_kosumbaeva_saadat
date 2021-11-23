@@ -1,9 +1,7 @@
-<div class="border rounded-lg p-2">
-  <h6>Group name</h6>
+<div class="border rounded-lg p-2 mb-2" (click)="onGroupClick()" [ngClass]="classForCurrentGroup()">
+  <h6>{{group.groupName}}</h6>
   <ul class="m-0">
-    <li>Name1</li>
-    <li>Name2</li>
-    <li>Name3</li>
+    <li *ngFor="let user of group.users">{{user}}</li>
   </ul>
 </div>
 

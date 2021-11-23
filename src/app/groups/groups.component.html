@@ -1,2 +1,9 @@
 <h3 class="text-center">Groups</h3>
-<app-group></app-group>
+<ng-container *ngIf="groups.length > 0; else emptyGroups">
+  <app-group *ngFor="let group of groups" [group]="group"></app-group>
+</ng-container>
+<ng-template #emptyGroups>
+  <div class="alert alert-primary">
+    Groups block is empty. Please add some groups!
+  </div>
+</ng-template>
