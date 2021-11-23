@@ -13,7 +13,7 @@ export class NewUserComponent {
   active = false;
   role = '';
 
-  constructor(public userService: UserService) {}
+  constructor(private userService: UserService) {}
 
   addUser() {
     if (this.name.trim().length &&
@@ -21,14 +21,15 @@ export class NewUserComponent {
       this.role !== 'Select' &&
       this.role !== '') {
 
-      this.userService.users.push(new User(this.name, this.email, this.active, this.role));
+      const newUser = new User(this.name, this.email, this.active, this.role);
+      this.userService.addUser(newUser);
 
       this.name = '';
       this.email = '';
       this.active = false;
       this.role = '';
     } else {
-      alert('Данные введены неверно');
+      alert('Data entered incorrectly');
     }
   }
 }

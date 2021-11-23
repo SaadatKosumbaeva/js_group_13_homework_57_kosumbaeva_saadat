@@ -1,6 +1,6 @@
 <h3 class="text-center">Users</h3>
-<div *ngIf="userService.users.length > 0; else emptyUsersList" class="list-group">
-  <app-user *ngFor="let user of userService.users" [user]="user"></app-user>
+<div *ngIf="users.length > 0; else emptyUsersList" class="list-group">
+  <app-user *ngFor="let user of users" [user]="user"></app-user>
 </div>
 <ng-template #emptyUsersList>
   <div class="alert alert-primary">
