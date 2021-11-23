@@ -7,8 +7,9 @@ import { User } from '../shared/user.module';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent implements OnInit{
+export class UsersComponent implements OnInit {
   users!: User[];
+
   constructor(private userService: UserService) {}
 
   ngOnInit() {

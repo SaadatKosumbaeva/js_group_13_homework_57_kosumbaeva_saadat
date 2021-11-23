@@ -1,7 +1,9 @@
 <h3 class="text-center">Users</h3>
+
 <div *ngIf="users.length > 0; else emptyUsersList">
   <app-user *ngFor="let user of users" [user]="user"></app-user>
 </div>
+
 <ng-template #emptyUsersList>
   <div class="alert alert-primary">
     Users block is empty. Please add some users!

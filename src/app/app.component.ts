@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  page = 'Users and Groups';
+
+  onManageClick() {
+    this.page = 'Manage';
+  }
+
+  onUsersAndGroupsClick() {
+    this.page = 'Users and Groups';
+  }
 }
