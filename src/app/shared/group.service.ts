@@ -5,7 +5,7 @@ export class GroupService {
   groupsChange = new EventEmitter<Group[]>();
   private groups: Group[] = [
     new Group('Hiking group', ['Admin', 'John']),
-    new Group('Book club', ['Kate', 'Isaac']),
+    new Group('Book club', ['Jane', 'Isaac']),
   ];
   currentGroup!: Group;
 
